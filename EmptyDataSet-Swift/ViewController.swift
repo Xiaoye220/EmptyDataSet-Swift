@@ -92,9 +92,9 @@ class ViewController: UITableViewController {
         
         switch type! {
         case .original:
-            controller = OriginalDetailViewController.init(app)
+            controller = OriginalUsageViewController.init(app)
         case .new:
-            controller = NewDetailViewController.init(app)
+            controller = NewUsageViewController.init(app)
         }
         
         navigationController?.pushViewController(controller, animated: true)

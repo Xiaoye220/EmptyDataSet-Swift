@@ -1,5 +1,5 @@
 //
-//  NewDetailViewController.swift
+//  NewUsageViewController.swift
 //  EmptyDataSet-Swift
 //
 //  Created by YZF on 3/7/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewDetailViewController: UITableViewController {
+class NewUsageViewController: UITableViewController {
     
     let application: [String: String]
     var isLoading = false {

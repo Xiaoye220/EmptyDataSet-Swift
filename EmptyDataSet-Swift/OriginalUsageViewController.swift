@@ -12,7 +12,7 @@ enum ApplicationType: String {
      case Airbnb, AppStore, Camera, Dropbox, Facebook, Fancy, Foursquare, iCloud, Instagram, iTunesConnect, Kickstarter, Path, Pinterest, Photos, Podcasts, Remote, Safari, Skype, Slack, Tumblr, Twitter, Videos, Vesper, Vine, Whatsapp, WWDC
 }
 
-class OriginalDetailViewController: UITableViewController, EmptyDataSetSource, EmptyDataSetDelegate {
+class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, EmptyDataSetDelegate {
 
     let application: [String: String]
     var isLoading = false {
