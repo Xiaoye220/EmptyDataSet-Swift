@@ -18,7 +18,7 @@ pod 'EmptyDataSet-Swift'
 ### Basic 
 基本用法和 [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet/blob/master/README.md) 一样
 
-`Same as [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet/blob/master/README.md)`
+>Same as [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet/blob/master/README.md)
 
 ```swift
 class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, EmptyDataSetDelegate {
@@ -128,7 +128,7 @@ public protocol EmptyDataSetSource: class {
 除了 DZNEmptyDataSet 中介绍的用法，另外拓展了不需要通过实现协议 DZNEmptyDataSetSource 和 DZNEmptyDataSetDelegate 的用法。
 只要给需要的 tableView 调用下面方法
 
-Usage without conform to datasource and/or delegate.Tableview just calls the following method.
+>Usage without conform to datasource and/or delegate.Tableview just calls the following method.
 
 ```swift
 public func emptyDataSetView(_ closure: @escaping (EmptyDataSetView) -> Void)
@@ -136,7 +136,7 @@ public func emptyDataSetView(_ closure: @escaping (EmptyDataSetView) -> Void)
 
 像这样子使用
 
-Like this
+>Like this
 
 ```swift
 tableView.emptyDataSetView { view in
