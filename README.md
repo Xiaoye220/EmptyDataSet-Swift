@@ -7,6 +7,8 @@
 
 >A drop-in UITableView/UICollectionView superclass category for showing empty datasets whenever the view has no content to display. DZNEmptyDataSet with Swift.
 
+## ScreenShot
+
 ![ScreenShot](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/ScreenShot.gif)
 
 ## CocoaPods
@@ -142,7 +144,7 @@ public func emptyDataSetView(_ closure: @escaping (EmptyDataSetView) -> Void)
 
 ```swift
 tableView.emptyDataSetView { view in
-    view.titleLabelString(titleString
+    view.titleLabelString(titleString)
         .detailLabelString(detailString)
         .image(image)
         .imageAnimation(imageAnimation)
@@ -159,10 +161,10 @@ tableView.emptyDataSetView { view in
         .isScrollAllowed(true)
         .isImageViewAnimateAllowed(isLoading)
         .didTapDataButton {
-            emptyDataSetDidTapButton
+            // Do something
         }
         .didTapContentView {
-            emptyDataSetDidTapView
+            // Do something
         }
 }
 
