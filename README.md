@@ -25,6 +25,8 @@ pod 'EmptyDataSet-Swift'
 >Same as [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet/blob/master/README.md)
 
 ```swift
+import EmptyDataSet_Swift
+
 class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, EmptyDataSetDelegate {
 
     override func viewDidLoad() {
