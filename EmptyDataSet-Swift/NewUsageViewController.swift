@@ -196,12 +196,12 @@ class NewUsageViewController: UITableViewController {
         if text == nil {
             return nil
         }
-        var attributes: [String: Any] = [:]
+        var attributes: [NSAttributedStringKey: Any] = [:]
         if font != nil {
-            attributes[NSFontAttributeName] = font!
+            attributes[NSAttributedStringKey.font] = font!
         }
         if textColor != nil {
-            attributes[NSForegroundColorAttributeName] = textColor
+            attributes[NSAttributedStringKey.foregroundColor] = textColor
         }
         return NSAttributedString.init(string: text!, attributes: attributes)
     }
@@ -326,12 +326,12 @@ class NewUsageViewController: UITableViewController {
         if text == nil {
             return nil
         }
-        var attributes: [String: Any] = [:]
+        var attributes: [NSAttributedStringKey: Any] = [:]
         if font != nil {
-            attributes[NSFontAttributeName] = font!
+            attributes[NSAttributedStringKey.font] = font!
         }
         if textColor != nil {
-            attributes[NSForegroundColorAttributeName] = textColor
+            attributes[NSAttributedStringKey.foregroundColor] = textColor
         }
         return NSAttributedString.init(string: text!, attributes: attributes)
     }
@@ -404,12 +404,12 @@ class NewUsageViewController: UITableViewController {
         if text == nil {
             return nil
         }
-        var attributes: [String: Any] = [:]
+        var attributes: [NSAttributedStringKey: Any] = [:]
         if font != nil {
-            attributes[NSFontAttributeName] = font!
+            attributes[NSAttributedStringKey.font] = font!
         }
         if textColor != nil {
-            attributes[NSForegroundColorAttributeName] = textColor
+            attributes[NSAttributedStringKey.foregroundColor] = textColor
         }
         return NSAttributedString.init(string: text!, attributes: attributes)
     }

@@ -126,13 +126,13 @@ extension EmptyDataSetView {
     }
     
     @discardableResult
-    public func didTapContentView(_ closure: @escaping (Void) -> Void) -> Self {
+    public func didTapContentView(_ closure: @escaping () -> Void) -> Self {
         didTapContentViewHandle = closure
         return self
     }
     
     @discardableResult
-    public func didTapDataButton(_ closure: @escaping (Void) -> Void) -> Self {
+    public func didTapDataButton(_ closure: @escaping () -> Void) -> Self {
         didTapDataButtonHandle = closure
         return self
     }
