@@ -15,7 +15,7 @@
 ## CocoaPods
 ```
 use_frameworks!
-pod 'EmptyDataSet-Swift'
+pod 'EmptyDataSet-Swift', '~> 2.0.0'
 ```
 
 
