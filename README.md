@@ -2,6 +2,7 @@
 ![pod](https://img.shields.io/badge/pod-1.0.0-brightgreen.svg)
 ![iOS](https://img.shields.io/badge/iOS-8.0-green.svg)
 ![lisence](https://img.shields.io/badge/license-MIT-orange.svg)
+![swift](https://img.shields.io/badge/swift-3.0-red.svg)
 
 当 UITableView/UICollectionView  数据为空时显示占位图
 
