@@ -90,7 +90,7 @@ public protocol EmptyDataSetDelegate: class {
 
 }
 
-extension EmptyDataSetDelegate {
+public extension EmptyDataSetDelegate {
     
     func emptyDataSetShouldFadeIn(_ scrollView: UIScrollView) -> Bool {
         return true

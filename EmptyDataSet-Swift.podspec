@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EmptyDataSet-Swift"
-  s.version      = "1.0.0"
+  s.version      = "4.0.0"
   s.summary      = "DZNEmptyDataSet with Swift."
 
   # This description is used to generate tags and improve search results.
@@ -91,7 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "EmptyDataSet/*"
+  s.source_files  = "EmptyDataSet-Swift/EmptyDataSet/*"
 
   # s.public_header_files = "Classes/**/*.h"
 

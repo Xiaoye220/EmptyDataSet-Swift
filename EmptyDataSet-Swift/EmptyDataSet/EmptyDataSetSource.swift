@@ -101,7 +101,7 @@ public protocol EmptyDataSetSource: class {
 
 }
 
-extension EmptyDataSetSource {
+public extension EmptyDataSetSource {
     
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         return nil

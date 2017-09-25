@@ -334,7 +334,6 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
         return animation;
     }
     
-    
     func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString? {
         var text: String?
         var font: UIFont?
@@ -391,7 +390,7 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
         }
         return NSAttributedString.init(string: text!, attributes: attributes)
     }
-    
+ 
     func buttonBackgroundImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> UIImage? {
         var imageName = "button_background_\(application["display_name"]!)".lowercased()
         
