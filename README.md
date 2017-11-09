@@ -1,5 +1,5 @@
 # EmptyDataSet-Swift
-![pod](https://img.shields.io/badge/pod-4.0.1-brightgreen.svg)
+![pod](https://img.shields.io/badge/pod-4.0.2-brightgreen.svg)
 ![iOS](https://img.shields.io/badge/iOS-8.0-green.svg)
 ![lisence](https://img.shields.io/badge/license-MIT-orange.svg)
 ![swift](https://img.shields.io/badge/swift-4.0-red.svg)
@@ -15,7 +15,7 @@
 ## CocoaPods
 ```
 use_frameworks!
-pod 'EmptyDataSet-Swift', '~> 4.0.1'
+pod 'EmptyDataSet-Swift', '~> 4.0.2'
 ```
 
 
@@ -197,4 +197,4 @@ func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
 
 >will show as follows
 
-![CustomScreenShot](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/CustomScreenShot.png)
+![CustomScreenShot](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/CustomViewScreenShot.png)
