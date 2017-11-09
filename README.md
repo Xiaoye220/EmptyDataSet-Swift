@@ -172,3 +172,8 @@ tableView.emptyDataSetView { view in
 }
 
 ```
+
+## Attension
+通过 EmptyDataSetSource 设置了 CustomView 其他设置都会无效。通过链式方式设置 CustomView 其他控件的自动布局会无效。
+
+>Set customView with EmptyDataSetSource, other setting will be invalid.Set customView with Extensions, other autolayout will be invalid.
