@@ -24,9 +24,12 @@
 		2F7823D91F05EF1E0053B957 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7823D71F05EF1E0053B957 /* Lato-Regular.ttf */; };
 		2F7823DB1F09E3F70053B957 /* NewUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7823DA1F09E3F70053B957 /* NewUsageViewController.swift */; };
 		2F7823E11F0A3C5A0053B957 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7823E01F0A3C5A0053B957 /* RootViewController.swift */; };
+		2FD3C7521FB4080200B6CFDA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3C7511FB4080200B6CFDA /* TestViewController.swift */; };
+		C4F9F164F5DF6992AE82228C /* Pods_EmptyDataSet_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CE3D52D81B623A3D04CF61 /* Pods_EmptyDataSet_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DDD682163873DB5D6DC0885 /* Pods-EmptyDataSet-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmptyDataSet-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		2F252F891F1605EB00C5B740 /* EmptyDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyDataSet.swift; path = EmptyDataSet/EmptyDataSet.swift; sourceTree = "<group>"; };
 		2F252F8A1F1605EB00C5B740 /* EmptyDataSetDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyDataSetDelegate.swift; path = EmptyDataSet/EmptyDataSetDelegate.swift; sourceTree = "<group>"; };
 		2F252F8B1F1605EB00C5B740 /* EmptyDataSetSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyDataSetSource.swift; path = EmptyDataSet/EmptyDataSetSource.swift; sourceTree = "<group>"; };
@@ -46,6 +49,9 @@
 		2F7823D71F05EF1E0053B957 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		2F7823DA1F09E3F70053B957 /* NewUsageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUsageViewController.swift; sourceTree = "<group>"; };
 		2F7823E01F0A3C5A0053B957 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		2FD3C7511FB4080200B6CFDA /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		465AEA74200A7388D8E7B232 /* Pods-EmptyDataSet-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmptyDataSet-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		F1CE3D52D81B623A3D04CF61 /* Pods_EmptyDataSet_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmptyDataSet_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F9F164F5DF6992AE82228C /* Pods_EmptyDataSet_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +71,8 @@
 			children = (
 				2F78239E1F0250520053B957 /* EmptyDataSet-Swift */,
 				2F78239D1F0250520053B957 /* Products */,
+				F3F799E744D91109DB8FCAA2 /* Pods */,
+				54F1F69A4766929391644BE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				2F7823B21F0251490053B957 /* EmptyDataSet */,
+				2FD3C74F1FB407D100B6CFDA /* ViewController */,
 				2F7823C51F04AD970053B957 /* UIColor+Extension.swift */,
 				2F78239F1F0250520053B957 /* AppDelegate.swift */,
-				2F7823E01F0A3C5A0053B957 /* RootViewController.swift */,
-				2F7823A11F0250520053B957 /* ViewController.swift */,
-				2F7823D11F04E0EF0053B957 /* OriginalUsageViewController.swift */,
-				2F7823DA1F09E3F70053B957 /* NewUsageViewController.swift */,
 				2F7823A31F0250520053B957 /* Main.storyboard */,
 				2F7823B11F0250DF0053B957 /* SupportFiles */,
 			);
@@ -140,6 +146,35 @@
 			path = Lato;
 			sourceTree = "<group>";
 		};
+		2FD3C74F1FB407D100B6CFDA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F7823E01F0A3C5A0053B957 /* RootViewController.swift */,
+				2F7823A11F0250520053B957 /* ViewController.swift */,
+				2F7823D11F04E0EF0053B957 /* OriginalUsageViewController.swift */,
+				2F7823DA1F09E3F70053B957 /* NewUsageViewController.swift */,
+				2FD3C7511FB4080200B6CFDA /* TestViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		54F1F69A4766929391644BE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1CE3D52D81B623A3D04CF61 /* Pods_EmptyDataSet_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3F799E744D91109DB8FCAA2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DDD682163873DB5D6DC0885 /* Pods-EmptyDataSet-Swift.debug.xcconfig */,
+				465AEA74200A7388D8E7B232 /* Pods-EmptyDataSet-Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +182,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F7823AE1F0250520053B957 /* Build configuration list for PBXNativeTarget "EmptyDataSet-Swift" */;
 			buildPhases = (
+				9E6921F3015A435C7F14A7DE /* [CP] Check Pods Manifest.lock */,
 				2F7823981F0250520053B957 /* Sources */,
 				2F7823991F0250520053B957 /* Frameworks */,
 				2F78239A1F0250520053B957 /* Resources */,
+				81BB9DBDAA57DCA7EFB97BB5 /* [CP] Embed Pods Frameworks */,
+				C62ADD0F79544A7B63588832 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,6 +250,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		81BB9DBDAA57DCA7EFB97BB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E6921F3015A435C7F14A7DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C62ADD0F79544A7B63588832 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F7823981F0250520053B957 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -227,6 +313,7 @@
 				2F252F901F1605EB00C5B740 /* EmptyDataSetSource.swift in Sources */,
 				2F252F911F1605EB00C5B740 /* EmptyDataSetView.swift in Sources */,
 				2F7823C61F04AD970053B957 /* UIColor+Extension.swift in Sources */,
+				2FD3C7521FB4080200B6CFDA /* TestViewController.swift in Sources */,
 				2F252F8E1F1605EB00C5B740 /* EmptyDataSet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +447,9 @@
 		};
 		2F7823AF1F0250520053B957 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DDD682163873DB5D6DC0885 /* Pods-EmptyDataSet-Swift.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B5ZRU68637;
 				INFOPLIST_FILE = "EmptyDataSet-Swift/Info.plist";
@@ -374,7 +463,9 @@
 		};
 		2F7823B01F0250520053B957 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 465AEA74200A7388D8E7B232 /* Pods-EmptyDataSet-Swift.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B5ZRU68637;
 				INFOPLIST_FILE = "EmptyDataSet-Swift/Info.plist";

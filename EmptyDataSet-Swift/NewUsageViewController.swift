@@ -32,6 +32,9 @@ class NewUsageViewController: UITableViewController {
         title = application["display_name"]
         
         tableView.tableFooterView = UIView()
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } 
         
         tableView.emptyDataSetView { [weak self] view in
             if let welf = self {

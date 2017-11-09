@@ -38,6 +38,9 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         tableView.tableFooterView = UIView()
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        }
     }
 
     override func didReceiveMemoryWarning() {

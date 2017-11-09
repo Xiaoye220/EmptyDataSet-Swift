@@ -27,12 +27,15 @@ class RootViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let controller = segue.destination as! ViewController
         switch segue.identifier! {
         case "showOriginal":
+            let controller = segue.destination as! ViewController
             controller.type = .original
         case "showNew":
+            let controller = segue.destination as! ViewController
             controller.type = .new
+        case "showTest":
+            break
         default:
             break
         }

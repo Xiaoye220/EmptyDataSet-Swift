@@ -179,15 +179,17 @@ public class EmptyDataSetView: UIView {
         
         addConstraints([centerXConstraint, centerYConstraint])
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[contentView]|", options: [], metrics: nil, views: ["contentView": contentView]))
-        
+
         // When a custom offset is available, we adjust the vertical constraints' constants
         if (verticalOffset != 0 && constraints.count > 0) {
             centerYConstraint.constant = verticalOffset
         }
         
-        if let customView = customView {
-            contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[customView]|", options: [], metrics: nil, views: ["customView": customView]))
-            contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[customView]|", options: [], metrics: nil, views: ["customView": customView]))
+        if let _ = customView {
+            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[contentView]|", options: [], metrics: nil, views: ["contentView": contentView]))
+
+//            contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[customView]|", options: [], metrics: nil, views: ["customView": customView]))
+//            contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[customView]|", options: [], metrics: nil, views: ["customView": customView]))
         } else {
             
             let width = frame.width > 0 ? frame.width : UIScreen.main.bounds.width
