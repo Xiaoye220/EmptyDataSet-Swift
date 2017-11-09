@@ -173,7 +173,28 @@ tableView.emptyDataSetView { view in
 
 ```
 
-## Attension
-通过 EmptyDataSetSource 设置了 CustomView 其他设置都会无效。通过链式方式设置 CustomView 其他控件的自动布局会无效。
+### CustomView
+**注意:** 通过 EmptyDataSetSource 设置了 CustomView 其他设置都会无效。通过链式方式设置 CustomView 其他控件的自动布局会无效。
 
 >Set customView with EmptyDataSetSource, other setting will be invalid.Set customView with Extensions, other autolayout will be invalid.
+
+```swift
+func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
+    let view = UIView()
+    view.frame = CGRect.init(x: 0, y: 100, width: UIScreen.main.bounds.width, height: 100)
+    view.backgroundColor = UIColor.lightGray
+
+    let label = UILabel()
+    label.frame = CGRect.init(x: 0, y: 10, width: UIScreen.main.bounds.width, height: 40)
+    label.text = "Test CustomView"
+
+    view.addSubview(label)
+
+    return view
+}
+```
+上述代码显示效果如下:
+
+>will show as follows
+
+![CustomScreenShot](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/CustomScreenShot.png)
