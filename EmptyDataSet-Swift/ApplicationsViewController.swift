@@ -8,32 +8,24 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ApplicationsViewController: UITableViewController {
     
     enum Implementation {
         case original
         case new
     }
     
-    var applications: [[String: String]] = []
+    var applications: [Application] = [.Airbnb, .AppStore, .Camera, .Dropbox, .Facebook,
+                                       .Fancy, .Foursquare, .iCloud, .Instagram, .iTunesConnect,
+                                       .Kickstarter, .Path, .Pinterest, .Photos, .Podcasts,
+                                       .Remote, .Safari, .Skype, .Slack, .Tumblr, .Twitter,
+                                       .Videos, .Vesper, .Vine, .Whatsapp, .WWDC]
     
-    var type: Implementation?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        let path = Bundle.main.path(forResource: "applications", ofType: "json")
-        do {
-            let data = try Data.init(contentsOf: URL.init(fileURLWithPath: path!))
-            do {
-                let result = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [[String: String]]
-                applications = result
-            } catch { }
-        } catch { }
-    }
+    var impl: Implementation!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.white
         
         title = "Applications"
         navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .plain, target: nil, action: nil)
@@ -51,33 +43,29 @@ class ViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return applications.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil {
             cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
         }
         let app = applications[indexPath.row]
-        cell?.textLabel?.text = app["display_name"]
-        cell?.detailTextLabel?.text = app["developer_name"]
+        cell.textLabel?.text = app.display_name
+        cell.detailTextLabel?.text = app.developer_name
         
-        let image = UIImage.init(named: ("icon_" + app["display_name"]!).lowercased().replacingOccurrences(of: " ", with: "_"))
-        cell?.imageView?.image = image
+        let image = UIImage.init(named: ("icon_" + app.display_name!).lowercased().replacingOccurrences(of: " ", with: "_"))
+        cell.imageView?.image = image
         
-        cell?.imageView?.layer.cornerRadius = (image?.size.width)! * 0.2
-        cell?.imageView?.layer.masksToBounds = true
-        cell?.imageView?.layer.borderColor = UIColor(white: 0, alpha: 0.2).cgColor
-        cell?.imageView?.layer.borderWidth = 0.5
+        cell.imageView?.layer.cornerRadius = (image?.size.width)! * 0.2
+        cell.imageView?.layer.masksToBounds = true
+        cell.imageView?.layer.borderColor = UIColor(white: 0, alpha: 0.2).cgColor
+        cell.imageView?.layer.borderWidth = 0.5
         
-        cell?.imageView?.layer.shouldRasterize = true
-        cell?.imageView?.layer.rasterizationScale = UIScreen.main.scale
+        cell.imageView?.layer.shouldRasterize = true
+        cell.imageView?.layer.rasterizationScale = UIScreen.main.scale
         
         return cell!
     }
@@ -90,11 +78,11 @@ class ViewController: UITableViewController {
         let app = applications[indexPath.row]
         var controller: UIViewController
         
-        switch type! {
+        switch impl! {
         case .original:
-            controller = OriginalUsageViewController.init(app)
+            controller = OriginalUsageViewController(app)
         case .new:
-            controller = NewUsageViewController.init(app)
+            controller = NewUsageViewController(app)
         }
         
         navigationController?.pushViewController(controller, animated: true)

@@ -10,15 +10,15 @@ import UIKit
 
 class NewUsageViewController: UITableViewController {
     
-    let application: [String: String]
+    let app: Application
     var isLoading = false {
         didSet {
             tableView.reloadEmptyDataSet()
         }
     }
     
-    init(_ application: [String: String]) {
-        self.application = application
+    init(_ application: Application) {
+        self.app = application
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -28,8 +28,9 @@ class NewUsageViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = application["display_name"]
+        view.backgroundColor = UIColor.white
+
+        title = app.display_name
         
         tableView.tableFooterView = UIView()
         if #available(iOS 11.0, *) {
@@ -38,17 +39,17 @@ class NewUsageViewController: UITableViewController {
         
         tableView.emptyDataSetView { [weak self] view in
             if let welf = self {
-                view.titleLabelString(welf.titleString())
-                    .detailLabelString(welf.detailString())
-                    .image(welf.image())
-                    .imageAnimation(welf.imageAnimation())
+                view.titleLabelString(welf.titleString)
+                    .detailLabelString(welf.detailString)
+                    .image(welf.image)
+                    .imageAnimation(welf.imageAnimation)
                     .buttonTitle(welf.buttonTitle(.normal), for: .normal)
                     .buttonTitle(welf.buttonTitle(.highlighted), for: .highlighted)
                     .buttonBackgroundImage(welf.buttonBackgroundImage(.normal), for: .normal)
                     .buttonBackgroundImage(welf.buttonBackgroundImage(.highlighted), for: .highlighted)
-                    .dataSetBackgroundColor(welf.backgroundColor())
-                    .verticalOffset(welf.verticalOffset())
-                    .verticalSpace(welf.spaceHeight())
+                    .dataSetBackgroundColor(welf.backgroundColor)
+                    .verticalOffset(welf.verticalOffset)
+                    .verticalSpace(welf.spaceHeight)
                     .shouldDisplay(true, view: welf.tableView)
                     .shouldFadeIn(true)
                     .isTouchAllowed(true)
@@ -89,12 +90,12 @@ class NewUsageViewController: UITableViewController {
     
     
     //MARK: - DataSetSource
-    func titleString() -> NSAttributedString? {
+    var titleString: NSAttributedString? {
         var text: String?
         var font: UIFont?
         var textColor: UIColor?
         
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+        switch app {
         case .Airbnb:
             text = "No Messages"
             font = UIFont.init(name: "HelveticaNeue-Light", size: 22)!
@@ -210,12 +211,12 @@ class NewUsageViewController: UITableViewController {
     }
     
     
-    func detailString() -> NSAttributedString? {
+    var detailString: NSAttributedString? {
         var text: String?
         var font: UIFont?
         var textColor: UIColor?
         
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+        switch app {
         case .Airbnb:
             text = "When you have messages, you’ll see them here."
             font = UIFont.systemFont(ofSize: 13.0)
@@ -339,16 +340,16 @@ class NewUsageViewController: UITableViewController {
         return NSAttributedString.init(string: text!, attributes: attributes)
     }
     
-    func image() -> UIImage? {
+    var image: UIImage? {
         if isLoading {
             return UIImage.init(named: "loading_imgBlue_78x78")
         } else {
-            let imageNamed = ("placeholder_" + application["display_name"]!).lowercased().replacingOccurrences(of: " ", with: "_")
+            let imageNamed = ("placeholder_" + app.display_name!).lowercased().replacingOccurrences(of: " ", with: "_")
             return UIImage.init(named: imageNamed)
         }
     }
     
-    func imageAnimation() -> CAAnimation? {
+    var imageAnimation: CAAnimation? {
         let animation = CABasicAnimation.init(keyPath: "transform")
         animation.fromValue = NSValue.init(caTransform3D: CATransform3DIdentity)
         animation.toValue = NSValue.init(caTransform3D: CATransform3DMakeRotation(.pi/2, 0.0, 0.0, 1.0))
@@ -365,7 +366,7 @@ class NewUsageViewController: UITableViewController {
         var font: UIFont?
         var textColor: UIColor?
         
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+        switch app {
         case .Airbnb:
             text = "Start Browsing";
             font = UIFont.boldSystemFont(ofSize: 16)
@@ -418,7 +419,7 @@ class NewUsageViewController: UITableViewController {
     }
     
     func buttonBackgroundImage(_ state: UIControlState) -> UIImage? {
-        var imageName = "button_background_\(application["display_name"]!)".lowercased()
+        var imageName = "button_background_\(app.display_name!)".lowercased()
         
         if state == .normal {
             imageName = imageName + "_normal"
@@ -430,7 +431,7 @@ class NewUsageViewController: UITableViewController {
         var capInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         var rectInsets = UIEdgeInsets.zero
         
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+        switch app {
         case .Foursquare:
             capInsets = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
             rectInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
@@ -448,8 +449,8 @@ class NewUsageViewController: UITableViewController {
         return image?.resizableImage(withCapInsets: capInsets, resizingMode: .stretch).withAlignmentRectInsets(rectInsets)
     }
     
-    func backgroundColor() -> UIColor? {
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+    var backgroundColor: UIColor? {
+        switch app {
         case .Airbnb:     return UIColor.white
         case .Dropbox:    return UIColor(hexColor: "f0f3f5")
         case .Facebook:   return UIColor(hexColor: "eceef7")
@@ -469,8 +470,8 @@ class NewUsageViewController: UITableViewController {
         }
     }
     
-    func verticalOffset() -> CGFloat {
-        switch ApplicationType(rawValue: application["display_name"]!)!  {
+    var verticalOffset: CGFloat {
+        switch app  {
         case .Kickstarter:
             var offset = UIApplication.shared.statusBarFrame.height
             offset += (navigationController?.navigationBar.frame.height)!
@@ -482,8 +483,8 @@ class NewUsageViewController: UITableViewController {
         }
     }
     
-    func spaceHeight() -> CGFloat {
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+    var spaceHeight: CGFloat {
+        switch app {
         case .Airbnb:         return 24.0
         case .AppStore:       return 34.0
         case .Facebook:       return 30.0

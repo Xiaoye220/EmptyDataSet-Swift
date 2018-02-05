@@ -12,7 +12,8 @@ class TestViewController: UITableViewController, EmptyDataSetSource, EmptyDataSe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = UIColor.white
+        
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         if #available(iOS 11.0, *) {
@@ -25,8 +26,6 @@ class TestViewController: UITableViewController, EmptyDataSetSource, EmptyDataSe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     
     func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
         let view = UIView()

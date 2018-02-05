@@ -10,36 +10,61 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    enum Content: String {
+        case originalUsage = "OriginalUsage"
+        case newUsage = "NewUsage"
+        case test = "Test"
+    }
+    
+    var contents: [Content] = [.originalUsage, .newUsage, .test]
+    
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.tableFooterView = UIView()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier! {
-        case "showOriginal":
-            let controller = segue.destination as! ViewController
-            controller.type = .original
-        case "showNew":
-            let controller = segue.destination as! ViewController
-            controller.type = .new
-        case "showTest":
-            break
-        default:
-            break
-        }
-    }
  
-
+}
+extension RootViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return contents.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "cell")
+        if cell == nil {
+            cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
+        }
+        
+        cell.textLabel?.text = contents[indexPath.row].rawValue
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller: UIViewController
+        switch contents[indexPath.row] {
+        case .originalUsage:
+            controller = ApplicationsViewController()
+            (controller as! ApplicationsViewController).impl = .original
+        case .newUsage:
+            controller = ApplicationsViewController()
+            (controller as! ApplicationsViewController).impl = .new
+        case .test:
+            controller = TestViewController()
+        }
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }

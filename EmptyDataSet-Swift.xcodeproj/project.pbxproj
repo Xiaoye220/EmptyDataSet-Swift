@@ -7,13 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F252F8E1F1605EB00C5B740 /* EmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F252F891F1605EB00C5B740 /* EmptyDataSet.swift */; };
-		2F252F8F1F1605EB00C5B740 /* EmptyDataSetDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F252F8A1F1605EB00C5B740 /* EmptyDataSetDelegate.swift */; };
-		2F252F901F1605EB00C5B740 /* EmptyDataSetSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F252F8B1F1605EB00C5B740 /* EmptyDataSetSource.swift */; };
-		2F252F911F1605EB00C5B740 /* EmptyDataSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F252F8C1F1605EB00C5B740 /* EmptyDataSetView.swift */; };
-		2F252F921F1605EB00C5B740 /* EmptyDataSetView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F252F8D1F1605EB00C5B740 /* EmptyDataSetView+Extension.swift */; };
 		2F7823A01F0250520053B957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78239F1F0250520053B957 /* AppDelegate.swift */; };
-		2F7823A21F0250520053B957 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7823A11F0250520053B957 /* ViewController.swift */; };
+		2F7823A21F0250520053B957 /* ApplicationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7823A11F0250520053B957 /* ApplicationsViewController.swift */; };
 		2F7823A51F0250520053B957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7823A31F0250520053B957 /* Main.storyboard */; };
 		2F7823AA1F0250520053B957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7823A81F0250520053B957 /* LaunchScreen.storyboard */; };
 		2F7823C61F04AD970053B957 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7823C51F04AD970053B957 /* UIColor+Extension.swift */; };
@@ -25,19 +20,20 @@
 		2F7823DB1F09E3F70053B957 /* NewUsageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7823DA1F09E3F70053B957 /* NewUsageViewController.swift */; };
 		2F7823E11F0A3C5A0053B957 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7823E01F0A3C5A0053B957 /* RootViewController.swift */; };
 		2FD3C7521FB4080200B6CFDA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD3C7511FB4080200B6CFDA /* TestViewController.swift */; };
+		2FFAC5F72027ED36008BD16D /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAC5F62027ED36008BD16D /* Application.swift */; };
+		2FFAC6002027EDC8008BD16D /* EmptyDataSetView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAC5FB2027EDC8008BD16D /* EmptyDataSetView+Extension.swift */; };
+		2FFAC6012027EDC8008BD16D /* EmptyDataSetDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAC5FC2027EDC8008BD16D /* EmptyDataSetDelegate.swift */; };
+		2FFAC6022027EDC8008BD16D /* EmptyDataSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAC5FD2027EDC8008BD16D /* EmptyDataSet.swift */; };
+		2FFAC6032027EDC8008BD16D /* EmptyDataSetSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAC5FE2027EDC8008BD16D /* EmptyDataSetSource.swift */; };
+		2FFAC6042027EDC8008BD16D /* EmptyDataSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAC5FF2027EDC8008BD16D /* EmptyDataSetView.swift */; };
 		C4F9F164F5DF6992AE82228C /* Pods_EmptyDataSet_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1CE3D52D81B623A3D04CF61 /* Pods_EmptyDataSet_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0DDD682163873DB5D6DC0885 /* Pods-EmptyDataSet-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmptyDataSet-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		2F252F891F1605EB00C5B740 /* EmptyDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyDataSet.swift; path = EmptyDataSet/EmptyDataSet.swift; sourceTree = "<group>"; };
-		2F252F8A1F1605EB00C5B740 /* EmptyDataSetDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyDataSetDelegate.swift; path = EmptyDataSet/EmptyDataSetDelegate.swift; sourceTree = "<group>"; };
-		2F252F8B1F1605EB00C5B740 /* EmptyDataSetSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyDataSetSource.swift; path = EmptyDataSet/EmptyDataSetSource.swift; sourceTree = "<group>"; };
-		2F252F8C1F1605EB00C5B740 /* EmptyDataSetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmptyDataSetView.swift; path = EmptyDataSet/EmptyDataSetView.swift; sourceTree = "<group>"; };
-		2F252F8D1F1605EB00C5B740 /* EmptyDataSetView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "EmptyDataSetView+Extension.swift"; path = "EmptyDataSet/EmptyDataSetView+Extension.swift"; sourceTree = "<group>"; };
 		2F78239C1F0250520053B957 /* EmptyDataSet-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EmptyDataSet-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F78239F1F0250520053B957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F7823A11F0250520053B957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2F7823A11F0250520053B957 /* ApplicationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsViewController.swift; sourceTree = "<group>"; };
 		2F7823A41F0250520053B957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2F7823A91F0250520053B957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F7823AB1F0250520053B957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +46,12 @@
 		2F7823DA1F09E3F70053B957 /* NewUsageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewUsageViewController.swift; sourceTree = "<group>"; };
 		2F7823E01F0A3C5A0053B957 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		2FD3C7511FB4080200B6CFDA /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		2FFAC5F62027ED36008BD16D /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		2FFAC5FB2027EDC8008BD16D /* EmptyDataSetView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "EmptyDataSetView+Extension.swift"; sourceTree = "<group>"; };
+		2FFAC5FC2027EDC8008BD16D /* EmptyDataSetDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataSetDelegate.swift; sourceTree = "<group>"; };
+		2FFAC5FD2027EDC8008BD16D /* EmptyDataSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataSet.swift; sourceTree = "<group>"; };
+		2FFAC5FE2027EDC8008BD16D /* EmptyDataSetSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataSetSource.swift; sourceTree = "<group>"; };
+		2FFAC5FF2027EDC8008BD16D /* EmptyDataSetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyDataSetView.swift; sourceTree = "<group>"; };
 		465AEA74200A7388D8E7B232 /* Pods-EmptyDataSet-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmptyDataSet-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		F1CE3D52D81B623A3D04CF61 /* Pods_EmptyDataSet_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmptyDataSet_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -87,7 +89,8 @@
 		2F78239E1F0250520053B957 /* EmptyDataSet-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				2F7823B21F0251490053B957 /* EmptyDataSet */,
+				2FFAC5FA2027EDBA008BD16D /* EmptyDataSet */,
+				2FFAC5F52027ED21008BD16D /* Application */,
 				2FD3C74F1FB407D100B6CFDA /* ViewController */,
 				2F7823C51F04AD970053B957 /* UIColor+Extension.swift */,
 				2F78239F1F0250520053B957 /* AppDelegate.swift */,
@@ -107,18 +110,6 @@
 				2F7823AB1F0250520053B957 /* Info.plist */,
 			);
 			name = SupportFiles;
-			sourceTree = "<group>";
-		};
-		2F7823B21F0251490053B957 /* EmptyDataSet */ = {
-			isa = PBXGroup;
-			children = (
-				2F252F891F1605EB00C5B740 /* EmptyDataSet.swift */,
-				2F252F8A1F1605EB00C5B740 /* EmptyDataSetDelegate.swift */,
-				2F252F8B1F1605EB00C5B740 /* EmptyDataSetSource.swift */,
-				2F252F8C1F1605EB00C5B740 /* EmptyDataSetView.swift */,
-				2F252F8D1F1605EB00C5B740 /* EmptyDataSetView+Extension.swift */,
-			);
-			name = EmptyDataSet;
 			sourceTree = "<group>";
 		};
 		2F7823D31F05EF1E0053B957 /* Fonts */ = {
@@ -150,12 +141,32 @@
 			isa = PBXGroup;
 			children = (
 				2F7823E01F0A3C5A0053B957 /* RootViewController.swift */,
-				2F7823A11F0250520053B957 /* ViewController.swift */,
+				2F7823A11F0250520053B957 /* ApplicationsViewController.swift */,
 				2F7823D11F04E0EF0053B957 /* OriginalUsageViewController.swift */,
 				2F7823DA1F09E3F70053B957 /* NewUsageViewController.swift */,
 				2FD3C7511FB4080200B6CFDA /* TestViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		2FFAC5F52027ED21008BD16D /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2FFAC5F62027ED36008BD16D /* Application.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		2FFAC5FA2027EDBA008BD16D /* EmptyDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				2FFAC5FD2027EDC8008BD16D /* EmptyDataSet.swift */,
+				2FFAC5FC2027EDC8008BD16D /* EmptyDataSetDelegate.swift */,
+				2FFAC5FE2027EDC8008BD16D /* EmptyDataSetSource.swift */,
+				2FFAC5FF2027EDC8008BD16D /* EmptyDataSetView.swift */,
+				2FFAC5FB2027EDC8008BD16D /* EmptyDataSetView+Extension.swift */,
+			);
+			path = EmptyDataSet;
 			sourceTree = "<group>";
 		};
 		54F1F69A4766929391644BE6 /* Frameworks */ = {
@@ -304,17 +315,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F7823E11F0A3C5A0053B957 /* RootViewController.swift in Sources */,
-				2F252F921F1605EB00C5B740 /* EmptyDataSetView+Extension.swift in Sources */,
-				2F7823A21F0250520053B957 /* ViewController.swift in Sources */,
+				2F7823A21F0250520053B957 /* ApplicationsViewController.swift in Sources */,
+				2FFAC6022027EDC8008BD16D /* EmptyDataSet.swift in Sources */,
 				2F7823A01F0250520053B957 /* AppDelegate.swift in Sources */,
 				2F7823D21F04E0EF0053B957 /* OriginalUsageViewController.swift in Sources */,
 				2F7823DB1F09E3F70053B957 /* NewUsageViewController.swift in Sources */,
-				2F252F8F1F1605EB00C5B740 /* EmptyDataSetDelegate.swift in Sources */,
-				2F252F901F1605EB00C5B740 /* EmptyDataSetSource.swift in Sources */,
-				2F252F911F1605EB00C5B740 /* EmptyDataSetView.swift in Sources */,
+				2FFAC6012027EDC8008BD16D /* EmptyDataSetDelegate.swift in Sources */,
 				2F7823C61F04AD970053B957 /* UIColor+Extension.swift in Sources */,
+				2FFAC5F72027ED36008BD16D /* Application.swift in Sources */,
+				2FFAC6032027EDC8008BD16D /* EmptyDataSetSource.swift in Sources */,
+				2FFAC6042027EDC8008BD16D /* EmptyDataSetView.swift in Sources */,
 				2FD3C7521FB4080200B6CFDA /* TestViewController.swift in Sources */,
-				2F252F8E1F1605EB00C5B740 /* EmptyDataSet.swift in Sources */,
+				2FFAC6002027EDC8008BD16D /* EmptyDataSetView+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,21 +8,17 @@
 
 import UIKit
 
-enum ApplicationType: String {
-     case Airbnb, AppStore, Camera, Dropbox, Facebook, Fancy, Foursquare, iCloud, Instagram, iTunesConnect, Kickstarter, Path, Pinterest, Photos, Podcasts, Remote, Safari, Skype, Slack, Tumblr, Twitter, Videos, Vesper, Vine, Whatsapp, WWDC
-}
-
 class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, EmptyDataSetDelegate {
 
-    let application: [String: String]
+    let app: Application
     var isLoading = false {
         didSet {
             tableView.reloadEmptyDataSet()
         }
     }
     
-    init(_ application: [String: String]) {
-        self.application = application
+    init(_ application: Application) {
+        self.app = application
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -32,8 +28,9 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor.white
 
-        title = application["display_name"]
+        title = app.display_name
         
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
@@ -72,7 +69,7 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
         var font: UIFont?
         var textColor: UIColor?
         
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+        switch app {
         case .Airbnb:
             text = "No Messages"
             font = UIFont.init(name: "HelveticaNeue-Light", size: 22)!
@@ -193,7 +190,7 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
         var font: UIFont?
         var textColor: UIColor?
         
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+        switch app {
         case .Airbnb:
             text = "When you have messages, you’ll see them here."
             font = UIFont.systemFont(ofSize: 13.0)
@@ -321,7 +318,7 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
         if isLoading {
             return UIImage.init(named: "loading_imgBlue_78x78")
         } else {
-            let imageNamed = ("placeholder_" + application["display_name"]!).lowercased().replacingOccurrences(of: " ", with: "_")
+            let imageNamed = ("placeholder_" + app.display_name!).lowercased().replacingOccurrences(of: " ", with: "_")
             return UIImage.init(named: imageNamed)
         }
     }
@@ -342,7 +339,7 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
         var font: UIFont?
         var textColor: UIColor?
         
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+        switch app {
         case .Airbnb:
             text = "Start Browsing";
             font = UIFont.boldSystemFont(ofSize: 16)
@@ -395,7 +392,7 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
     }
  
     func buttonBackgroundImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> UIImage? {
-        var imageName = "button_background_\(application["display_name"]!)".lowercased()
+        var imageName = "button_background_\(app.display_name!)".lowercased()
         
         if state == .normal {
             imageName = imageName + "_normal"
@@ -407,7 +404,7 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
         var capInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         var rectInsets = UIEdgeInsets.zero
         
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+        switch app {
         case .Foursquare:
             capInsets = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
             rectInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
@@ -426,7 +423,7 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
     }
     
     func backgroundColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+        switch app {
         case .Airbnb:     return UIColor.white
         case .Dropbox:    return UIColor(hexColor: "f0f3f5")
         case .Facebook:   return UIColor(hexColor: "eceef7")
@@ -447,7 +444,7 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
     }
     
     func verticalOffset(forEmptyDataSet scrollView: UIScrollView) -> CGFloat {
-        switch ApplicationType(rawValue: application["display_name"]!)!  {
+        switch app  {
         case .Kickstarter:
             var offset = UIApplication.shared.statusBarFrame.height
             offset += (navigationController?.navigationBar.frame.height)!
@@ -460,7 +457,7 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
     }
     
     func spaceHeight(forEmptyDataSet scrollView: UIScrollView) -> CGFloat {
-        switch ApplicationType(rawValue: application["display_name"]!)! {
+        switch app {
         case .Airbnb:         return 24.0
         case .AppStore:       return 34.0
         case .Facebook:       return 30.0
