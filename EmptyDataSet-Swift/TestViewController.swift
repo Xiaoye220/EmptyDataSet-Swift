@@ -8,18 +8,26 @@
 
 import UIKit
 
-class TestViewController: UITableViewController, EmptyDataSetSource, EmptyDataSetDelegate {
+class TestViewController: UIViewController, EmptyDataSetSource, EmptyDataSetDelegate {
 
+    var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         
+        let topHeight = UIApplication.shared.statusBarFrame.height + 44
+        tableView = UITableView.init(frame: CGRect.init(x: 0, y: topHeight + 200, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - topHeight - 200))
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        self.view.addSubview(tableView)
+
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         } 
-        tableView.tableFooterView = UIView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +48,14 @@ class TestViewController: UITableViewController, EmptyDataSetSource, EmptyDataSe
 
         return view
     }
-    
+}
 
+extension TestViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
 }

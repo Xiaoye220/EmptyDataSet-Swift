@@ -122,6 +122,10 @@ public class EmptyDataSetView: UIView {
     
     internal var didTapContentViewHandle: (() -> Void)?
     internal var didTapDataButtonHandle: (() -> Void)?
+    internal var willAppearHandle: (() -> Void)?
+    internal var didAppearHandle: (() -> Void)?
+    internal var willDisappearHandle: (() -> Void)?
+    internal var didDisappearHandle: (() -> Void)?
 
     override init(frame: CGRect) {
         super.init(frame: frame)

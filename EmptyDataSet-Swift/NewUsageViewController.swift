@@ -38,29 +38,30 @@ class NewUsageViewController: UITableViewController {
         } 
         
         tableView.emptyDataSetView { [weak self] view in
-            if let welf = self {
-                view.titleLabelString(welf.titleString)
-                    .detailLabelString(welf.detailString)
-                    .image(welf.image)
-                    .imageAnimation(welf.imageAnimation)
-                    .buttonTitle(welf.buttonTitle(.normal), for: .normal)
-                    .buttonTitle(welf.buttonTitle(.highlighted), for: .highlighted)
-                    .buttonBackgroundImage(welf.buttonBackgroundImage(.normal), for: .normal)
-                    .buttonBackgroundImage(welf.buttonBackgroundImage(.highlighted), for: .highlighted)
-                    .dataSetBackgroundColor(welf.backgroundColor)
-                    .verticalOffset(welf.verticalOffset)
-                    .verticalSpace(welf.spaceHeight)
-                    .shouldDisplay(true, view: welf.tableView)
+            if let `self` = self {
+                view.titleLabelString(self.titleString)
+                    .detailLabelString(self.detailString)
+                    .image(self.image)
+                    .imageAnimation(self.imageAnimation)
+                    .buttonTitle(self.buttonTitle(.normal), for: .normal)
+                    .buttonTitle(self.buttonTitle(.highlighted), for: .highlighted)
+                    .buttonBackgroundImage(self.buttonBackgroundImage(.normal), for: .normal)
+                    .buttonBackgroundImage(self.buttonBackgroundImage(.highlighted), for: .highlighted)
+                    .dataSetBackgroundColor(self.backgroundColor)
+                    .verticalOffset(self.verticalOffset)
+                    .verticalSpace(self.spaceHeight)
+                    .shouldDisplay(false)
                     .shouldFadeIn(true)
                     .isTouchAllowed(true)
                     .isScrollAllowed(true)
-                    .isImageViewAnimateAllowed(welf.isLoading)
+                    .isImageViewAnimateAllowed(self.isLoading)
                     .didTapDataButton {
-                        welf.emptyDataSetDidTapButton()
+                        self.emptyDataSetDidTapButton()
                     }
                     .didTapContentView {
-                        welf.emptyDataSetDidTapView()
+                        self.emptyDataSetDidTapView()
                     }
+                    
             }
         }
     }
