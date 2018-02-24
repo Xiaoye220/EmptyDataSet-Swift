@@ -246,8 +246,10 @@ extension UIScrollView: UIGestureRecognizerDelegate {
     }
     
     //MARK: - Reload APIs (Public)
-
     public func reloadEmptyDataSet() {
+        guard (emptyDataSetSource != nil || configureEmptyDataSetView != nil) else {
+            return
+        }
         
         if (shouldDisplay && itemsCount == 0) || shouldBeForcedToDisplay {
             // Notifies that the empty dataset view will appear
@@ -362,7 +364,6 @@ extension UIScrollView: UIGestureRecognizerDelegate {
     
     
     //MARK: - Method Swizzling
-    
     @objc private func tableViewSwizzledReloadData() {
         tableViewSwizzledReloadData()
         reloadEmptyDataSet()

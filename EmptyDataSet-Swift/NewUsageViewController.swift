@@ -50,7 +50,7 @@ class NewUsageViewController: UITableViewController {
                     .dataSetBackgroundColor(self.backgroundColor)
                     .verticalOffset(self.verticalOffset)
                     .verticalSpace(self.spaceHeight)
-                    .shouldDisplay(false)
+                    .shouldDisplay(true)
                     .shouldFadeIn(true)
                     .isTouchAllowed(true)
                     .isScrollAllowed(true)

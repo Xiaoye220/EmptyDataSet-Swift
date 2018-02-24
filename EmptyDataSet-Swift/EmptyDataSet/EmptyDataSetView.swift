@@ -173,7 +173,6 @@ public class EmptyDataSetView: UIView {
     
     
     // MARK: - Auto-Layout Configuration
-    
     internal func setupConstraints() {
         
         // First, configure the content view constaints
@@ -222,7 +221,7 @@ public class EmptyDataSetView: UIView {
                 subviewStrings.append("titleLabel")
                 views[subviewStrings.last!] = titleLabel
                 
-                contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(padding@750)-[titleLabel(>=0)]-(padding@750)-|", options: [], metrics: metrics, views: views))
+                contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(padding)-[titleLabel(>=0)]-(padding)-|", options: [], metrics: metrics, views: views))
             } else {
                 titleLabel.isHidden = true
             }
@@ -232,8 +231,8 @@ public class EmptyDataSetView: UIView {
                 detailLabel.isHidden = false
                 subviewStrings.append("detailLabel")
                 views[subviewStrings.last!] = detailLabel
-                
-                contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(padding@750)-[detailLabel(>=0)]-(padding@750)-|", options: [], metrics: metrics, views: views))
+
+                contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(padding)-[detailLabel(>=0)]-(padding)-|", options: [], metrics: metrics, views: views))
             } else {
                 detailLabel.isHidden = true
             }
@@ -244,7 +243,7 @@ public class EmptyDataSetView: UIView {
                 subviewStrings.append("button")
                 views[subviewStrings.last!] = button
                 
-                contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(padding@750)-[button(>=0)]-(padding@750)-|", options: [], metrics: metrics, views: views))
+                contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-(padding)-[button(>=0)]-(padding)-|", options: [], metrics: metrics, views: views))
             } else {
                 button.isHidden = true
             }
@@ -257,7 +256,7 @@ public class EmptyDataSetView: UIView {
                 verticalFormat += "[\(string)]"
                 
                 if i < subviewStrings.count - 1 {
-                    verticalFormat += "-(\(verticalSpace)@750)-"
+                    verticalFormat += "-(\(verticalSpace))-"
                 }
             }
             
