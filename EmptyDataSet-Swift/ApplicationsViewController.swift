@@ -38,6 +38,12 @@ class ApplicationsViewController: UITableViewController {
         navigationController?.navigationBar.barStyle = .default
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.barTintColor = UIColor(hexColor: "f8f8f8")
+        navigationController?.navigationBar.tintColor = UIColor.black
+        UIApplication.shared.statusBarStyle = .default
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,7 +56,7 @@ class ApplicationsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "cell")
         if cell == nil {
-            cell = UITableViewCell.init(style: .default, reuseIdentifier: "cell")
+            cell = UITableViewCell.init(style: .subtitle, reuseIdentifier: "cell")
         }
         let app = applications[indexPath.row]
         cell.textLabel?.text = app.display_name

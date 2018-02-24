@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F3ED93520414EAB00B39182 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3ED93420414EAB00B39182 /* Configuration.swift */; };
 		2F7823A01F0250520053B957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78239F1F0250520053B957 /* AppDelegate.swift */; };
 		2F7823A21F0250520053B957 /* ApplicationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7823A11F0250520053B957 /* ApplicationsViewController.swift */; };
 		2F7823A51F0250520053B957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F7823A31F0250520053B957 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		0DDD682163873DB5D6DC0885 /* Pods-EmptyDataSet-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmptyDataSet-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		2F3ED93420414EAB00B39182 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		2F78239C1F0250520053B957 /* EmptyDataSet-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EmptyDataSet-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F78239F1F0250520053B957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F7823A11F0250520053B957 /* ApplicationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsViewController.swift; sourceTree = "<group>"; };
@@ -90,7 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				2FFAC5FA2027EDBA008BD16D /* EmptyDataSet */,
-				2FFAC5F52027ED21008BD16D /* Application */,
+				2FFAC5F52027ED21008BD16D /* Model */,
 				2FD3C74F1FB407D100B6CFDA /* ViewController */,
 				2F7823C51F04AD970053B957 /* UIColor+Extension.swift */,
 				2F78239F1F0250520053B957 /* AppDelegate.swift */,
@@ -149,12 +151,13 @@
 			name = ViewController;
 			sourceTree = "<group>";
 		};
-		2FFAC5F52027ED21008BD16D /* Application */ = {
+		2FFAC5F52027ED21008BD16D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2FFAC5F62027ED36008BD16D /* Application.swift */,
+				2F3ED93420414EAB00B39182 /* Configuration.swift */,
 			);
-			name = Application;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		2FFAC5FA2027EDBA008BD16D /* EmptyDataSet */ = {
@@ -316,6 +319,7 @@
 			files = (
 				2F7823E11F0A3C5A0053B957 /* RootViewController.swift in Sources */,
 				2F7823A21F0250520053B957 /* ApplicationsViewController.swift in Sources */,
+				2F3ED93520414EAB00B39182 /* Configuration.swift in Sources */,
 				2FFAC6022027EDC8008BD16D /* EmptyDataSet.swift in Sources */,
 				2F7823A01F0250520053B957 /* AppDelegate.swift in Sources */,
 				2F7823D21F04E0EF0053B957 /* OriginalUsageViewController.swift in Sources */,
