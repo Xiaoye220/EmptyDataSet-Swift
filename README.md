@@ -19,7 +19,8 @@
 use_frameworks!
 pod 'EmptyDataSet-Swift', '~> 4.0.3'
 ```
-
+## History
+### 4.0.3: fix issues #6、#7
 
 ## Usage
 ### Basic 
