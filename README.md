@@ -10,7 +10,9 @@
 
 ## ScreenShot
 
-![ScreenShot](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/ScreenShot.gif)
+![Screenshots_row1](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/Screenshots_row1.png)
+
+![Screenshots_row2](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/Screenshots_row2.png)
 
 ## CocoaPods
 ```
