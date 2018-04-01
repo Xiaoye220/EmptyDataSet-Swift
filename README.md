@@ -182,18 +182,75 @@ tableView.emptyDataSetView { view in
 ### CustomView
 **注意:** 通过 EmptyDataSetSource 设置了 CustomView 其他设置都会无效。通过链式方式设置 CustomView 其他控件的自动布局会无效。
 
->Set customView using EmptyDataSetSource, other setting will be invalid.Set customView with Extensions, other autolayout will be invalid.
+>Set customView using EmptyDataSetSource, other setting will be invalid.Set customView using Extensions, other autolayout will be invalid.
 
 设置 CustomView 的规则是：
 1.居中显示
-2.长宽以 CustomView 实际为准
 2.垂直偏移量根据 EmptyDataSetSource 中 verticalOffset 设置
+3.长宽以 CustomView 实际值为准。但是 CustomView 是 UILabel 这类 UIView，那么如果未设置 frame 的话会根据内容自动布局合适的长宽
 
+>Rule for setting customView
+1.CustomView will Display in the center of tableView
+2.The verticalOffset of customView can be setted by ```func verticalOffset(forEmptyDataSet scrollView: UIScrollView) -> CGFloat```
+3.The width and height is equel to the frame of customView.But if the customView is UILabel and it's frame is CGRect.zero,it's width and height will be autolayout by it's content.
+
+**Example:**
+
+#### Rule 1
 ```swift
-
+func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
+    let view = CustomView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+    return view
+}
+```
+```swift
+tableView.emptyDataSetView { [weak self] view in
+    view.customView(CustomView(frame: CGRect(x: 0, y: 0, width: 150, height: 150)))
+}
 ```
 上述代码显示效果如下:
 
->will show as follows
+>The above code will show as follows
 
-![CustomScreenShot](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/CustomViewScreenShot.png)
+![CustomScreenShot_1](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/CustomViewScreenShot_1.png)
+
+#### Rule 2
+
+```swift
+func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
+    let view = CustomView(frame: CGRect(x: 0, y: 0, width: 150, height: 150))
+    return view
+}
+func verticalOffset(forEmptyDataSet scrollView: UIScrollView) -> CGFloat {
+    return 200
+}
+```
+```swift
+tableView.emptyDataSetView { [weak self] view in
+    view.customView(CustomView(frame: CGRect(x: 0, y: 0, width: 150, height: 150)))
+        .verticalOffset(200)
+}
+```
+
+上述代码显示效果如下:
+
+>The above code will show as follows
+
+![CustomScreenShot_2](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/CustomViewScreenShot_2.png)
+
+#### Rule 3
+
+```swift
+func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
+    let label = UILabel()
+    label.text = "CustomView"
+    label.backgroundColor = UIColor.red
+    return label
+}
+```
+
+上述代码显示效果如下:
+
+>The above code will show as follows
+
+![CustomScreenShot_3](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/CustomViewScreenShot_3.png)
