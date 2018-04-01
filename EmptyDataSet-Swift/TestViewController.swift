@@ -16,7 +16,7 @@ class TestViewController: UIViewController, EmptyDataSetSource, EmptyDataSetDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.lightGray
         
         let topHeight = UIApplication.shared.statusBarFrame.height + 44
         tableView = UITableView.init(frame: CGRect.init(x: 0, y: topHeight, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - topHeight))
@@ -29,7 +29,8 @@ class TestViewController: UIViewController, EmptyDataSetSource, EmptyDataSetDele
         tableView.emptyDataSetDelegate = self
 //        tableView.emptyDataSetView { [weak self] view in
 //            guard let `self` = self else { return }
-//            view.customView(CustomViewWithXib.init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 100)))
+//            view.customView(CustomView(frame: CGRect(x: 0, y: 0, width: 100, height: 100)))
+//                .verticalOffset(50)
 //        }
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
@@ -43,19 +44,17 @@ class TestViewController: UIViewController, EmptyDataSetSource, EmptyDataSetDele
         // Dispose of any resources that can be recreated.
     }
     
+    func backgroundColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor? {
+        return UIColor.init(white: 0.95, alpha: 1)
+    }
+    
     func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
-        let view = CustomViewWithXib.init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 100))
-//        let view = UILabel()//init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 100))
-//        view.text = "lalala"
-//        let view = UIView.init(frame: CGRect.init(x: 0, y: 0, width: 100, height: 100))
-//        let view = UIImageView.init(frame: CGRect.init(x: 0, y: 0, width: 200, height: 200))
-//        view.image = UIImage.init(named: "AppIcon")
-//        view.backgroundColor = UIColor.red
+        let view = CustomView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         return view
     }
  
     func verticalOffset(forEmptyDataSet scrollView: UIScrollView) -> CGFloat {
-        return 50
+        return 0
     }
 }
 

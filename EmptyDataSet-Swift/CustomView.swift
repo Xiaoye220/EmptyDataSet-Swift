@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomViewWithXib: UIView {
+class CustomView: UIView {
 
     @IBOutlet var view: UIView!
     
@@ -23,7 +23,7 @@ class CustomViewWithXib: UIView {
     
     private func loadViewFromXib() {
         //该代码会把 owner 的类中的 IBOutlet 都按照 xib 初始化
-        Bundle.main.loadNibNamed("CustomViewWithXib", owner: self, options: nil)
+        Bundle.main.loadNibNamed("CustomView", owner: self, options: nil)
         view.frame = bounds
         addSubview(view)
     }

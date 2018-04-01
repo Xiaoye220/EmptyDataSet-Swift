@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F07341C206F1DAB002F99A5 /* CustomViewWithXib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07341B206F1DAB002F99A5 /* CustomViewWithXib.swift */; };
-		2F07341E206F1DC0002F99A5 /* CustomViewWithXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F07341D206F1DC0002F99A5 /* CustomViewWithXib.xib */; };
+		2F07341C206F1DAB002F99A5 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F07341B206F1DAB002F99A5 /* CustomView.swift */; };
+		2F07341E206F1DC0002F99A5 /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F07341D206F1DC0002F99A5 /* CustomView.xib */; };
 		2F3ED93520414EAB00B39182 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3ED93420414EAB00B39182 /* Configuration.swift */; };
 		2F7823A01F0250520053B957 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F78239F1F0250520053B957 /* AppDelegate.swift */; };
 		2F7823A21F0250520053B957 /* ApplicationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7823A11F0250520053B957 /* ApplicationsViewController.swift */; };
@@ -34,8 +34,8 @@
 
 /* Begin PBXFileReference section */
 		0DDD682163873DB5D6DC0885 /* Pods-EmptyDataSet-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmptyDataSet-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		2F07341B206F1DAB002F99A5 /* CustomViewWithXib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewWithXib.swift; sourceTree = "<group>"; };
-		2F07341D206F1DC0002F99A5 /* CustomViewWithXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomViewWithXib.xib; sourceTree = "<group>"; };
+		2F07341B206F1DAB002F99A5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		2F07341D206F1DC0002F99A5 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		2F3ED93420414EAB00B39182 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		2F78239C1F0250520053B957 /* EmptyDataSet-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EmptyDataSet-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F78239F1F0250520053B957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,8 +147,8 @@
 		2F85D1F0206F1D06003A45F7 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2F07341B206F1DAB002F99A5 /* CustomViewWithXib.swift */,
-				2F07341D206F1DC0002F99A5 /* CustomViewWithXib.xib */,
+				2F07341B206F1DAB002F99A5 /* CustomView.swift */,
+				2F07341D206F1DC0002F99A5 /* CustomView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 				2F7823D91F05EF1E0053B957 /* Lato-Regular.ttf in Resources */,
 				2F7823AA1F0250520053B957 /* LaunchScreen.storyboard in Resources */,
 				2F7823D01F04DEC50053B957 /* Assets.xcassets in Resources */,
-				2F07341E206F1DC0002F99A5 /* CustomViewWithXib.xib in Resources */,
+				2F07341E206F1DC0002F99A5 /* CustomView.xib in Resources */,
 				2F7823D81F05EF1E0053B957 /* IdealSans-Book-Pro.otf in Resources */,
 				2F7823A51F0250520053B957 /* Main.storyboard in Resources */,
 			);
@@ -345,7 +345,7 @@
 				2F7823A01F0250520053B957 /* AppDelegate.swift in Sources */,
 				2F7823D21F04E0EF0053B957 /* OriginalUsageViewController.swift in Sources */,
 				2F7823DB1F09E3F70053B957 /* NewUsageViewController.swift in Sources */,
-				2F07341C206F1DAB002F99A5 /* CustomViewWithXib.swift in Sources */,
+				2F07341C206F1DAB002F99A5 /* CustomView.swift in Sources */,
 				2FFAC6012027EDC8008BD16D /* EmptyDataSetDelegate.swift in Sources */,
 				2F7823C61F04AD970053B957 /* UIColor+Extension.swift in Sources */,
 				2FFAC5F72027ED36008BD16D /* Application.swift in Sources */,
