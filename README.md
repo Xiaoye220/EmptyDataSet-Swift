@@ -23,7 +23,7 @@ pod 'EmptyDataSet-Swift', '~> 4.0.4'
 **4.0.3:** Fix issues [#6](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/6)、[#7](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/7)
 
 **4.0.4:** Fix issues [#8](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/8)、[#9](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/9)、[#10](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/10).
-Th problem that customView layout will be failed.
+The problem that customView layout will be failed.
 
 ## Usage
 ### Basic 
@@ -185,14 +185,15 @@ tableView.emptyDataSetView { view in
 >Set customView using EmptyDataSetSource, other setting will be invalid.Set customView using Extensions, other autolayout will be invalid.
 
 设置 CustomView 的规则是：
-1.居中显示
-2.垂直偏移量根据 EmptyDataSetSource 中 verticalOffset 设置
-3.长宽以 CustomView 实际值为准。但是 CustomView 是 UILabel 这类 UIView，那么如果未设置 frame 的话会根据内容自动布局合适的长宽
+
+1. 居中显示
+2. 垂直偏移量根据 EmptyDataSetSource 中 verticalOffset 设置
+3. 长宽以 CustomView 实际值为准。但是 CustomView 是 UILabel 这类 UIView，那么如果未设置 frame 的话会根据内容自动布局合适的长宽
 
 >Rule for setting customView
-1.CustomView will Display in the center of tableView
-2.The verticalOffset of customView can be setted by ```func verticalOffset(forEmptyDataSet scrollView: UIScrollView) -> CGFloat```
-3.The width and height is equel to the frame of customView.But if the customView is UILabel and it's frame is CGRect.zero,it's width and height will be autolayout by it's content.
+1. CustomView will Display in the center of tableView
+2. The verticalOffset of customView can be setted by ```func verticalOffset(forEmptyDataSet scrollView: UIScrollView) -> CGFloat```
+3. The width and height is equel to the frame of customView.But if the customView is UILabel and it's frame is CGRect.zero,it's width and height will be autolayout by it's content.
 
 **Example:**
 
