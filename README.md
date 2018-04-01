@@ -179,7 +179,7 @@ tableView.emptyDataSetView { view in
 
 ```
 
-### CustomView
+### About CustomView
 **注意:** 通过 EmptyDataSetSource 设置了 CustomView 其他设置都会无效。通过链式方式设置 CustomView 其他控件的自动布局会无效。
 
 >Set customView by using EmptyDataSetSource, other setting will be invalid.Set customView by using Extensions, other autolayout will be invalid.
@@ -211,7 +211,7 @@ tableView.emptyDataSetView { [weak self] view in
 ```
 上述代码显示效果如下:
 
->The above code will show as follows
+>above code will show as follows
 
 ![CustomScreenShot_1](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/CustomViewScreenShot_1.png)
 
@@ -235,7 +235,7 @@ tableView.emptyDataSetView { [weak self] view in
 
 上述代码显示效果如下:
 
->The above code will show as follows
+>above code will show as follows
 
 ![CustomScreenShot_2](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/CustomViewScreenShot_2.png)
 
@@ -252,6 +252,6 @@ func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
 
 上述代码显示效果如下:
 
->The above code will show as follows
+>above code will show as follows
 
 ![CustomScreenShot_3](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/CustomViewScreenShot_3.png)
