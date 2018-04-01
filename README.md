@@ -1,5 +1,5 @@
 # EmptyDataSet-Swift
-![pod](https://img.shields.io/badge/pod-4.0.3-brightgreen.svg)
+![pod](https://img.shields.io/badge/pod-4.0.4-brightgreen.svg)
 ![iOS](https://img.shields.io/badge/iOS-8.0-green.svg)
 ![lisence](https://img.shields.io/badge/license-MIT-orange.svg)
 ![swift](https://img.shields.io/badge/swift-4.0-red.svg)
@@ -17,10 +17,13 @@
 ## CocoaPods
 ```
 use_frameworks!
-pod 'EmptyDataSet-Swift', '~> 4.0.3'
+pod 'EmptyDataSet-Swift', '~> 4.0.4'
 ```
 ## History
 **4.0.3:** Fix issues [#6](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/6)、[#7](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/7)
+
+**4.0.4:** Fix issues [#8](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/8)、[#9](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/9)、[#10](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/10).
+Th problem that customView layout will be failed.
 
 ## Usage
 ### Basic 
@@ -179,22 +182,15 @@ tableView.emptyDataSetView { view in
 ### CustomView
 **注意:** 通过 EmptyDataSetSource 设置了 CustomView 其他设置都会无效。通过链式方式设置 CustomView 其他控件的自动布局会无效。
 
->Set customView with EmptyDataSetSource, other setting will be invalid.Set customView with Extensions, other autolayout will be invalid.
+>Set customView using EmptyDataSetSource, other setting will be invalid.Set customView with Extensions, other autolayout will be invalid.
+
+设置 CustomView 的规则是：
+1.居中显示
+2.长宽以 CustomView 实际为准
+2.垂直偏移量根据 EmptyDataSetSource 中 verticalOffset 设置
 
 ```swift
-func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
-    let view = UIView()
-    view.frame = CGRect.init(x: 0, y: 100, width: UIScreen.main.bounds.width, height: 100)
-    view.backgroundColor = UIColor.lightGray
 
-    let label = UILabel()
-    label.frame = CGRect.init(x: 0, y: 10, width: UIScreen.main.bounds.width, height: 40)
-    label.text = "Test CustomView"
-
-    view.addSubview(label)
-
-    return view
-}
 ```
 上述代码显示效果如下:
 
