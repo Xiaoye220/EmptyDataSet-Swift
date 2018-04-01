@@ -177,20 +177,43 @@ public class EmptyDataSetView: UIView {
         
         // First, configure the content view constaints
         // The content view must alway be centered to its superview
-        let centerXConstraint = NSLayoutConstraint.init(item: contentView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0.0)
-        let centerYConstraint = NSLayoutConstraint.init(item: contentView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+        let centerXConstraint = NSLayoutConstraint(item: contentView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        let centerYConstraint = NSLayoutConstraint(item: contentView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0)
         
-        addConstraints([centerXConstraint, centerYConstraint])
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[contentView]|", options: [], metrics: nil, views: ["contentView": contentView]))
+        self.addConstraints([centerXConstraint, centerYConstraint])
+        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[contentView]|", options: [], metrics: nil, views: ["contentView": contentView]))
 
         // When a custom offset is available, we adjust the vertical constraints' constants
         if (verticalOffset != 0 && constraints.count > 0) {
             centerYConstraint.constant = verticalOffset
         }
         
-        if let _ = customView {
-            addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[contentView]|", options: [], metrics: nil, views: ["contentView": contentView]))
-
+        if let customView = customView {
+            let centerXConstraint = NSLayoutConstraint(item: customView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+            let centerYConstraint = NSLayoutConstraint(item: customView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+            
+            let customViewHeight = customView.frame.height
+            let customViewWidth = customView.frame.width
+            var heightConstarint: NSLayoutConstraint!
+            var widthConstarint: NSLayoutConstraint!
+            
+            if(customViewHeight == 0) {
+                heightConstarint = NSLayoutConstraint(item: customView, attribute: .height, relatedBy: .lessThanOrEqual, toItem: self, attribute: .height, multiplier: 1, constant: 0.0)
+            } else {
+                heightConstarint = NSLayoutConstraint(item: customView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: customViewHeight)
+            }
+            if(customViewWidth == 0) {
+                widthConstarint = NSLayoutConstraint(item: customView, attribute: .width, relatedBy: .lessThanOrEqual, toItem: self, attribute: .width, multiplier: 1, constant: 0.0)
+            } else {
+                widthConstarint = NSLayoutConstraint(item: customView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: customViewWidth)
+            }
+            
+            // When a custom offset is available, we adjust the vertical constraints' constants
+            if (verticalOffset != 0) {
+                centerYConstraint.constant = verticalOffset
+            }
+            self.addConstraints([centerXConstraint, centerYConstraint])
+            self.addConstraints([heightConstarint, widthConstarint])
 //            contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[customView]|", options: [], metrics: nil, views: ["customView": customView]))
 //            contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[customView]|", options: [], metrics: nil, views: ["customView": customView]))
         } else {

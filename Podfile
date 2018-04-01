@@ -4,7 +4,7 @@ target 'EmptyDataSet-Swift' do
 
 use_frameworks!
 
-
+pod 'SnapKit'
 
 end
 
