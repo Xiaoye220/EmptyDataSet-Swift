@@ -235,8 +235,9 @@ extension UIScrollView: UIGestureRecognizerDelegate {
         emptyDataSetView?.didDisappearHandle?()
     }
     
-    @objc private func didTapContentView(_ sender: UIView) {
-        emptyDataSetDelegate?.emptyDataSet(self, didTapView: sender)
+    @objc private func didTapContentView(_ sender: UITapGestureRecognizer) {
+        guard let view = sender.view else { return }
+        emptyDataSetDelegate?.emptyDataSet(self, didTapView: view)
         emptyDataSetView?.didTapContentViewHandle?()
     }
     
