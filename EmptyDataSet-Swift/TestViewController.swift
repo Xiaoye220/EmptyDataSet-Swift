@@ -34,9 +34,7 @@ class TestViewController: UIViewController, EmptyDataSetSource, EmptyDataSetDele
 //        }
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
-        } 
-        tableView.tableFooterView = UIView()
-        
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,12 +47,32 @@ class TestViewController: UIViewController, EmptyDataSetSource, EmptyDataSetDele
     }
     
     func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
-        let view = CustomView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        view.backgroundColor = .red
+        
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        button.setTitle("button", for: .normal)
+        button.backgroundColor = UIColor.black
+        view.addSubview(button)
+        button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        
         return view
     }
  
     func verticalOffset(forEmptyDataSet scrollView: UIScrollView) -> CGFloat {
         return 0
+    }
+    
+    func emptyDataSet(_ scrollView: UIScrollView, didTapView view: UIView) {
+        print("hello")
+    }
+    
+    func emptyDataSetShouldAllowTouch(_ scrollView: UIScrollView) -> Bool {
+        return true
+    }
+    
+    @objc func buttonClicked() {
+        
     }
 }
 
