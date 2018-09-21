@@ -27,6 +27,8 @@ The problem that customView layout will be failed.
 
 **4.0.5:** Fix issues [#13](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/13)、[#14](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/14)
 
+**4.2.0:** Support Swift 4.2
+
 ## Usage
 ### Basic 
 基本用法和 [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet/blob/master/README.md) 一样
