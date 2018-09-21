@@ -161,15 +161,15 @@ extension UIScrollView: UIGestureRecognizerDelegate {
         return emptyDataSetSource?.imagetintColor(forEmptyDataSet: self)
     }
     
-    private func buttonTitle(for state: UIControlState) -> NSAttributedString? {
+    private func buttonTitle(for state: UIControl.State) -> NSAttributedString? {
         return emptyDataSetSource?.buttonTitle(forEmptyDataSet: self, for: state)
     }
     
-    private func buttonImage(for state: UIControlState) -> UIImage? {
+    private func buttonImage(for state: UIControl.State) -> UIImage? {
         return emptyDataSetSource?.buttonImage(forEmptyDataSet: self, for: state)
     }
     
-    private func buttonBackgroundImage(for state: UIControlState) -> UIImage? {
+    private func buttonBackgroundImage(for state: UIControl.State) -> UIImage? {
         return emptyDataSetSource?.buttonBackgroundImage(forEmptyDataSet: self, for: state)
     }
     
@@ -279,7 +279,7 @@ extension UIScrollView: UIGestureRecognizerDelegate {
                 } else {
                     // Get the data from the data source
                     
-                    let renderingMode: UIImageRenderingMode = imageTintColor != nil ? .alwaysTemplate : .alwaysOriginal
+                    let renderingMode: UIImage.RenderingMode = imageTintColor != nil ? .alwaysTemplate : .alwaysOriginal
                     
                     view.verticalSpace = verticalSpace
                     

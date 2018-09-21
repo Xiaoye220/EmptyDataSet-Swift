@@ -83,11 +83,11 @@ class OriginalUsageViewController: UITableViewController, EmptyDataSetSource, Em
         return config.imageAnimation
     }
     
-    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString? {
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> NSAttributedString? {
         return config.buttonTitle(state)
     }
  
-    func buttonBackgroundImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> UIImage? {
+    func buttonBackgroundImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> UIImage? {
         return config.buttonBackgroundImage(state)
     }
     

@@ -131,12 +131,12 @@ struct Configuration {
         if text == nil {
             return nil
         }
-        var attributes: [NSAttributedStringKey: Any] = [:]
+        var attributes: [NSAttributedString.Key: Any] = [:]
         if font != nil {
-            attributes[NSAttributedStringKey.font] = font!
+            attributes[NSAttributedString.Key.font] = font!
         }
         if textColor != nil {
-            attributes[NSAttributedStringKey.foregroundColor] = textColor
+            attributes[NSAttributedString.Key.foregroundColor] = textColor
         }
         return NSAttributedString.init(string: text!, attributes: attributes)
     }
@@ -261,12 +261,12 @@ struct Configuration {
         if text == nil {
             return nil
         }
-        var attributes: [NSAttributedStringKey: Any] = [:]
+        var attributes: [NSAttributedString.Key: Any] = [:]
         if font != nil {
-            attributes[NSAttributedStringKey.font] = font!
+            attributes[NSAttributedString.Key.font] = font!
         }
         if textColor != nil {
-            attributes[NSAttributedStringKey.foregroundColor] = textColor
+            attributes[NSAttributedString.Key.foregroundColor] = textColor
         }
         return NSAttributedString.init(string: text!, attributes: attributes)
     }
@@ -292,7 +292,7 @@ struct Configuration {
     }
     
     
-    func buttonTitle(_ state: UIControlState) -> NSAttributedString? {
+    func buttonTitle(_ state: UIControl.State) -> NSAttributedString? {
         var text: String?
         var font: UIFont?
         var textColor: UIColor?
@@ -339,17 +339,17 @@ struct Configuration {
         if text == nil {
             return nil
         }
-        var attributes: [NSAttributedStringKey: Any] = [:]
+        var attributes: [NSAttributedString.Key: Any] = [:]
         if font != nil {
-            attributes[NSAttributedStringKey.font] = font!
+            attributes[NSAttributedString.Key.font] = font!
         }
         if textColor != nil {
-            attributes[NSAttributedStringKey.foregroundColor] = textColor
+            attributes[NSAttributedString.Key.foregroundColor] = textColor
         }
         return NSAttributedString.init(string: text!, attributes: attributes)
     }
     
-    func buttonBackgroundImage(_ state: UIControlState) -> UIImage? {
+    func buttonBackgroundImage(_ state: UIControl.State) -> UIImage? {
         var imageName = "button_background_\(app.display_name!)".lowercased()
         
         if state == .normal {
@@ -453,7 +453,7 @@ extension Configuration {
         case .Camera:
             barColor = UIColor(hexColor: "595959")
             tintColor = UIColor.white
-            self.controller.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: tintColor!]
+            self.controller.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: tintColor!]
         case .Dropbox:
             barColor = UIColor.white
             tintColor = UIColor(hexColor: "007ee5")

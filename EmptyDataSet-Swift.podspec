@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "EmptyDataSet-Swift"
-  s.version      = "4.0.5"
+  s.version      = "4.2.0"
   s.summary      = "DZNEmptyDataSet with Swift."
 
   # This description is used to generate tags and improve search results.

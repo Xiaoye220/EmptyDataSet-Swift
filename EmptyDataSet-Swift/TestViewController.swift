@@ -27,11 +27,12 @@ class TestViewController: UIViewController, EmptyDataSetSource, EmptyDataSetDele
 
         tableView.emptyDataSetSource = self
         tableView.emptyDataSetDelegate = self
-//        tableView.emptyDataSetView { [weak self] view in
-//            guard let `self` = self else { return }
-//            view.customView(CustomView(frame: CGRect(x: 0, y: 0, width: 100, height: 100)))
-//                .verticalOffset(50)
-//        }
+        tableView.emptyDataSetView { [weak self] view in
+            guard let `self` = self else { return }
+            view.customView(CustomView(frame: CGRect(x: 0, y: 0, width: 100, height: 100)))
+                .verticalOffset(50)
+                .buttonImage(nil, for: .disabled)
+        }
         if #available(iOS 11.0, *) {
             tableView.contentInsetAdjustmentBehavior = .never
         }
@@ -49,18 +50,25 @@ class TestViewController: UIViewController, EmptyDataSetSource, EmptyDataSetDele
     func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         view.backgroundColor = .red
-        
+
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
         button.setTitle("button", for: .normal)
         button.backgroundColor = UIColor.black
         view.addSubview(button)
         button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
-        
+
         return view
     }
+//    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString? {
+//        return NSAttributedString(string: "lalala")
+//    }
+//
+//    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+//        return NSAttributedString(string: "hahaha")
+//    }
  
     func verticalOffset(forEmptyDataSet scrollView: UIScrollView) -> CGFloat {
-        return 0
+        return 100
     }
     
     func emptyDataSet(_ scrollView: UIScrollView, didTapView view: UIView) {
