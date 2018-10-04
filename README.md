@@ -17,7 +17,7 @@
 ## CocoaPods
 ```
 use_frameworks!
-pod 'EmptyDataSet-Swift', '~> 4.0.5'
+pod 'EmptyDataSet-Swift', '~> 4.2.0'
 ```
 ## History
 **4.0.3:** Fix issues [#6](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/6)、[#7](https://github.com/Xiaoye220/EmptyDataSet-Swift/issues/7)
