@@ -366,8 +366,10 @@ extension UIScrollView: UIGestureRecognizerDelegate {
     
     //MARK: - Method Swizzling
     @objc private func tableViewSwizzledReloadData() {
-        tableViewSwizzledReloadData()
-        reloadEmptyDataSet()
+        DispatchQueue.main.async {
+            self.tableViewSwizzledReloadData()
+            self.reloadEmptyDataSet()
+        }
     }
     
     @objc private func tableViewSwizzledEndUpdates() {
