@@ -285,7 +285,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -294,7 +294,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EmptyDataSet-Swift/Pods-EmptyDataSet-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9E6921F3015A435C7F14A7DE /* [CP] Check Pods Manifest.lock */ = {
