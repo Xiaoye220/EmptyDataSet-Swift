@@ -37,7 +37,7 @@
 		2F07341B206F1DAB002F99A5 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		2F07341D206F1DC0002F99A5 /* CustomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
 		2F3ED93420414EAB00B39182 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		2F78239C1F0250520053B957 /* EmptyDataSet-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EmptyDataSet-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F78239C1F0250520053B957 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F78239F1F0250520053B957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F7823A11F0250520053B957 /* ApplicationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsViewController.swift; sourceTree = "<group>"; };
 		2F7823A41F0250520053B957 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		2F7823931F0250520053B957 = {
 			isa = PBXGroup;
 			children = (
-				2F78239E1F0250520053B957 /* EmptyDataSet-Swift */,
+				2F78239E1F0250520053B957 /* Example */,
 				2F78239D1F0250520053B957 /* Products */,
 				F3F799E744D91109DB8FCAA2 /* Pods */,
 				54F1F69A4766929391644BE6 /* Frameworks */,
@@ -87,12 +87,12 @@
 		2F78239D1F0250520053B957 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2F78239C1F0250520053B957 /* EmptyDataSet-Swift.app */,
+				2F78239C1F0250520053B957 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2F78239E1F0250520053B957 /* EmptyDataSet-Swift */ = {
+		2F78239E1F0250520053B957 /* Example */ = {
 			isa = PBXGroup;
 			children = (
 				2FFAC5FA2027EDBA008BD16D /* EmptyDataSet */,
@@ -104,7 +104,7 @@
 				2F7823A31F0250520053B957 /* Main.storyboard */,
 				2F7823B11F0250DF0053B957 /* SupportFiles */,
 			);
-			path = "EmptyDataSet-Swift";
+			path = Example;
 			sourceTree = "<group>";
 		};
 		2F7823B11F0250DF0053B957 /* SupportFiles */ = {
@@ -206,9 +206,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2F78239B1F0250520053B957 /* EmptyDataSet-Swift */ = {
+		2F78239B1F0250520053B957 /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2F7823AE1F0250520053B957 /* Build configuration list for PBXNativeTarget "EmptyDataSet-Swift" */;
+			buildConfigurationList = 2F7823AE1F0250520053B957 /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				9E6921F3015A435C7F14A7DE /* [CP] Check Pods Manifest.lock */,
 				2F7823981F0250520053B957 /* Sources */,
@@ -220,9 +220,9 @@
 			);
 			dependencies = (
 			);
-			name = "EmptyDataSet-Swift";
+			name = Example;
 			productName = "EmptyDataSet-Swift";
-			productReference = 2F78239C1F0250520053B957 /* EmptyDataSet-Swift.app */;
+			productReference = 2F78239C1F0250520053B957 /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -256,7 +256,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2F78239B1F0250520053B957 /* EmptyDataSet-Swift */,
+				2F78239B1F0250520053B957 /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -480,7 +480,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z6EUN2AQ2C;
-				INFOPLIST_FILE = "EmptyDataSet-Swift/Info.plist";
+				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "YZF.EmptyDataSet-Swift";
@@ -496,7 +496,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Z6EUN2AQ2C;
-				INFOPLIST_FILE = "EmptyDataSet-Swift/Info.plist";
+				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "YZF.EmptyDataSet-Swift";
@@ -517,7 +517,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F7823AE1F0250520053B957 /* Build configuration list for PBXNativeTarget "EmptyDataSet-Swift" */ = {
+		2F7823AE1F0250520053B957 /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2F7823AF1F0250520053B957 /* Debug */,
