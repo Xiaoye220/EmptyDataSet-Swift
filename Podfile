@@ -1,10 +1,8 @@
 platform :ios,'8.0'
 
-target 'EmptyDataSet-Swift' do
-
 use_frameworks!
 
-pod 'SnapKit'
-
+target 'EmptyDataSet-Swift' do
+	pod 'SnapKit'
 end
 
