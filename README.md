@@ -1,5 +1,6 @@
 # EmptyDataSet-Swift
 ![pod](https://img.shields.io/badge/pod-4.2.0-brightgreen.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![iOS](https://img.shields.io/badge/iOS-8.0-green.svg)
 ![lisence](https://img.shields.io/badge/license-MIT-orange.svg)
 ![swift](https://img.shields.io/badge/swift-5.0-red.svg)
@@ -12,11 +13,19 @@ A drop-in UITableView/UICollectionView superclass category for showing empty dat
 
 ![Screenshots_row2](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/EmptyDataSet-Swift/ScreenShot/Screenshots_row2.png)
 
-## CocoaPods
+## Installation
+
+### CocoaPods
 ```
-use_frameworks!
 pod 'EmptyDataSet-Swift', '~> 4.2.0'
 ```
+
+### Carthage
+
+```
+github "Xiaoye220/EmptyDataSet-Swift" "4.2.0"
+```
+
 ## Usage
 ### Basic 
 Same as [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet/blob/master/README.md)
