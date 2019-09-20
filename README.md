@@ -1,5 +1,5 @@
 # EmptyDataSet-Swift
-![pod](https://img.shields.io/badge/pod-4.2.0-brightgreen.svg)
+![pod](https://img.shields.io/badge/pod-5.0.0-brightgreen.svg)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 ![iOS](https://img.shields.io/badge/iOS-8.0-green.svg)
 ![lisence](https://img.shields.io/badge/license-MIT-orange.svg)
@@ -9,15 +9,15 @@ A drop-in UITableView/UICollectionView superclass category for showing empty dat
 
 ## ScreenShot
 
-![Screenshots_row1](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/Example/ScreenShot/Screenshots_row1.png)
+![Screenshots_row1](Example/ScreenShot/Screenshots_row1.png)
 
-![Screenshots_row2](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/Example/ScreenShot/Screenshots_row2.png)
+![Screenshots_row2](Example/ScreenShot/Screenshots_row2.png)
 
 ## Installation
 
 ### CocoaPods
 ```
-pod 'EmptyDataSet-Swift', '~> 4.2.0'
+pod 'EmptyDataSet-Swift', '~> 5.0.0'
 ```
 
 ### Carthage
@@ -197,7 +197,7 @@ tableView.emptyDataSetView { [weak self] view in
 ```
 above code will show as follows
 
-![CustomScreenShot_1](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/Example/ScreenShot/CustomViewScreenShot_1.png)
+![CustomScreenShot_1](Example/ScreenShot/CustomViewScreenShot_1.png)
 
 #### Rule 2
 
@@ -219,7 +219,7 @@ tableView.emptyDataSetView { [weak self] view in
 
 above code will show as follows
 
-![CustomScreenShot_2](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/Example/ScreenShot/CustomViewScreenShot_2.png)
+![CustomScreenShot_2](Example/ScreenShot/CustomViewScreenShot_2.png)
 
 #### Rule 3
 
@@ -234,4 +234,4 @@ func customView(forEmptyDataSet scrollView: UIScrollView) -> UIView? {
 
 above code will show as follows
 
-![CustomScreenShot_3](https://github.com/Xiaoye220/EmptyDataSet-Swift/blob/master/Example/ScreenShot/CustomViewScreenShot_3.png)
+![CustomScreenShot_3](Example/ScreenShot/CustomViewScreenShot_3.png)
