@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 import EmptyDataSet_Swift
 
 class TestViewController: UIViewController, EmptyDataSetSource, EmptyDataSetDelegate {
@@ -56,6 +55,14 @@ class TestViewController: UIViewController, EmptyDataSetSource, EmptyDataSetDele
 
     func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
         return NSAttributedString(string: "hahaha")
+    }
+    
+    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+        var animatedImages = [UIImage]()
+        for i in 0 ... 96 {
+            animatedImages.append(UIImage(named: "\(i)")!)
+        }
+        return UIImage.animatedImage(with: animatedImages, duration: 5)
     }
     
     @objc func reload() {
