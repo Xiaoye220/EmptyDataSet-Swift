@@ -110,15 +110,15 @@ public protocol EmptyDataSetSource: class {
     
     /// Asks the data source for the title to be used for the specified button state.
     /// The dataset uses a fixed font style by default, if no attributes are set. If you want a different font style, return a attributed string.
-    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString?
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> NSAttributedString?
     
     /// Asks the data source for the image to be used for the specified button state.
     /// This method will override buttonTitleForEmptyDataSet:forState: and present the image only without any text.
-    func buttonImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> UIImage?
+    func buttonImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> UIImage?
     
     /// Asks the data source for a background image to be used for the specified button state.
     /// There is no default style for this call.
-    func buttonBackgroundImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> UIImage?
+    func buttonBackgroundImage(forEmptyDataSet scrollView: UIScrollView, for state: UIControl.State) -> UIImage?
 
     /// Asks the data source for the background color of the dataset. Default is clear color.
     func backgroundColor(forEmptyDataSet scrollView: UIScrollView) -> UIColor?
